@@ -21,9 +21,8 @@ class NotificationSetting {
 
     var serializedPlatformSpecifics =
         _retrievePlatformSpecificNotificationDetails(notificationDetails);
-    await _channel.invokeMethod('configureChannel', <String, dynamic>{
-      'platformSpecifics': serializedPlatformSpecifics,
-    });
+    await _channel.invokeMethod(
+        'configureChannel', serializedPlatformSpecifics);
   }
 
   static Map<String, dynamic> _retrievePlatformSpecificNotificationDetails(
