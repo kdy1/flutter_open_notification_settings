@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:open_noti_settings/open_noti_settings.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('open_noti_settings');
@@ -15,7 +14,5 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await OpenNotiSettings.platformVersion, '42');
-  });
+  test('getPlatformVersion', () async {});
 }
