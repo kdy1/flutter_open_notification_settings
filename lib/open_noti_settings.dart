@@ -2,8 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-
-import 'notification_details.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationSetting {
   static const _channel = MethodChannel('open_noti_settings');
