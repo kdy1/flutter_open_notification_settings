@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58326738-288a-48b6-80e7-0153d52f5863" name="Default Changelist" comment="v0.0.3: Use flutter_local_notification">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/example_lib_main_dart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/example_lib_main_dart.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/open_noti_settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/open_noti_settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    <list default="true" id="58326738-288a-48b6-80e7-0153d52f5863" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +61,7 @@
       <workItem from="1567129543824" duration="1870000" />
       <workItem from="1567131893293" duration="142000" />
       <workItem from="1567132383495" duration="59000" />
-      <workItem from="1567132530825" duration="1227000" />
+      <workItem from="1567132530825" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.3: Use flutter_local_notification">
       <created>1567131989873</created>
@@ -73,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567131989873</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.0.2+3">
+      <created>1567137527788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567137527788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.0.3: Use flutter_local_notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.3: Use flutter_local_notification" />
+    <MESSAGE value="v0.0.2+3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.2+3" />
   </component>
 </project>
