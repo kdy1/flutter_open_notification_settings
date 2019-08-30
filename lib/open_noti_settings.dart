@@ -8,8 +8,7 @@ class NotificationSetting {
   static const _channel = MethodChannel('open_noti_settings');
 
   static Future<void> open() async {
-    final String version = await _channel.invokeMethod('open');
-    return version;
+    await _channel.invokeMethod('open');
   }
 
   /// Configures channel on android. This is no-op on ios.

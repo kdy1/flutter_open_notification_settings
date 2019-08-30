@@ -1,6 +1,7 @@
 package io.github.kdy1.open_noti_settings;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -60,6 +61,9 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
           CharSequence name = call.argument("channelName");
           String description = call.argument("channelDescription");
           Integer importance = call.argument("importance");
+          if (importance == null) {
+              importance = NotificationManager.IMPORTANCE_DEFAULT;
+          }
           NotificationChannel channel = new NotificationChannel(id, name, importance);
           channel.setDescription(description);
           channel.setGroup((String) call.argument("groupKey"));
@@ -70,7 +74,7 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
               Uri uri = retrieveSoundResourceUri(activity, (String) call.argument("sound"));
               channel.setSound(uri, audioAttributes);
           } else {
-              channel.setSound(null,null);
+//              channel.setSound(null,null);
           }
 
           channel.enableVibration(Boolean.valueOf(true).equals(call.argument("enableVibration")));
