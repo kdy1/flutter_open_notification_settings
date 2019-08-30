@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58326738-288a-48b6-80e7-0153d52f5863" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/io/github/kdy1/open_noti_settings/OpenNotiSettingsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/io/github/kdy1/open_noti_settings/OpenNotiSettingsPlugin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +63,7 @@
       <workItem from="1567131893293" duration="142000" />
       <workItem from="1567132383495" duration="59000" />
       <workItem from="1567132530825" duration="1302000" />
+      <workItem from="1567137808880" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.3: Use flutter_local_notification">
       <created>1567131989873</created>

@@ -73,35 +73,35 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
           }
           NotificationChannel channel = new NotificationChannel(id, name, importance);
           channel.setDescription(description);
-//          channel.setGroup((String) call.argument("groupKey"));
-//          // TODO
-////          channel.setLightColor();
-//          if (Boolean.valueOf(true).equals(call.argument("playSound"))) {
-//              AudioAttributes audioAttributes = new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).build();
-//              Uri uri = retrieveSoundResourceUri(activity, (String) call.argument("sound"));
-//              channel.setSound(uri, audioAttributes);
-//          } else {
-////              channel.setSound(null,null);
-//          }
-//
-//          channel.enableVibration(Boolean.valueOf(true).equals(call.argument("enableVibration")));
-//
-//          if(call.hasArgument("vibrationPattern")){
-//              channel.setVibrationPattern((long[]) call.argument("vibrationPattern"));
-//          }
-//
-//          boolean enableLights = Boolean.valueOf(true).equals(call.argument("enableLights"));
-//          channel.enableLights(enableLights);
-//          if (enableLights && call.hasArgument("ledColorAlpha") && call.hasArgument("ledColorRed")
-//                  && call.hasArgument("ledColorGreen") && call.hasArgument("ledColorBlue")) {
-//              channel.setLightColor(Color.argb(
-//                  (int) call.argument("ledColorAlpha"),
-//                  (int) call.argument("ledColorRed"),
-//                  (int) call.argument("ledColorGreen"),
-//                  (int) call.argument("ledColorBlue")
-//              ));
-//          }
-//          channel.setShowBadge(Boolean.valueOf(true).equals(call.argument("channelShowBadge")));
+          channel.setGroup((String) call.argument("groupKey"));
+          // TODO
+//          channel.setLightColor();
+          if (Boolean.valueOf(true).equals(call.argument("playSound"))) {
+              AudioAttributes audioAttributes = new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).build();
+              Uri uri = retrieveSoundResourceUri(activity, (String) call.argument("sound"));
+              channel.setSound(uri, audioAttributes);
+          } else {
+//              channel.setSound(null,null);
+          }
+
+          channel.enableVibration(Boolean.valueOf(true).equals(call.argument("enableVibration")));
+
+          if(call.hasArgument("vibrationPattern")){
+              channel.setVibrationPattern((long[]) call.argument("vibrationPattern"));
+          }
+
+          boolean enableLights = Boolean.valueOf(true).equals(call.argument("enableLights"));
+          channel.enableLights(enableLights);
+          if (enableLights && call.hasArgument("ledColorAlpha") && call.hasArgument("ledColorRed")
+                  && call.hasArgument("ledColorGreen") && call.hasArgument("ledColorBlue")) {
+              channel.setLightColor(Color.argb(
+                  (int) call.argument("ledColorAlpha"),
+                  (int) call.argument("ledColorRed"),
+                  (int) call.argument("ledColorGreen"),
+                  (int) call.argument("ledColorBlue")
+              ));
+          }
+          channel.setShowBadge(Boolean.valueOf(true).equals(call.argument("channelShowBadge")));
           // Register the channel with the system; you can't change the importance
           // or other notification behaviors after this
           NotificationManager notificationManager = activity.getSystemService(NotificationManager.class);

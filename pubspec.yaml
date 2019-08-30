@@ -1,6 +1,6 @@
 name: open_noti_settings
 description: A plugin to open notification settings
-version: 0.0.2+3
+version: 0.0.2+4
 author: DongYoon Kang <kdy1@outlook.kr>
 homepage: https://github.com/kdy1/flutter_open_notification_settings
 
@@ -11,7 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_local_notifications: ^0.8.2
-
 
 dev_dependencies:
   flutter_test:
@@ -29,7 +28,6 @@ flutter:
   plugin:
     androidPackage: io.github.kdy1.open_noti_settings
     pluginClass: OpenNotiSettingsPlugin
-
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
@@ -40,7 +38,6 @@ flutter:
   #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
-
   # To add custom fonts to your plugin package, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
