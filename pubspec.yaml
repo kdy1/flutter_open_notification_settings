@@ -1,6 +1,6 @@
 name: open_noti_settings
 description: A plugin to open notification settings
-version: 0.0.2+4
+version: 0.0.2+5
 author: DongYoon Kang <kdy1@outlook.kr>
 homepage: https://github.com/kdy1/flutter_open_notification_settings
 

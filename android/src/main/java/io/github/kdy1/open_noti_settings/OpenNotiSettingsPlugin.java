@@ -20,16 +20,16 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** OpenNotiSettingsPlugin */
 public class OpenNotiSettingsPlugin implements MethodCallHandler {
-    private final Activity activity;
+    private final Registrar registrar;
 
-    private OpenNotiSettingsPlugin(Activity activity) {
-        this.activity = activity;
+    private OpenNotiSettingsPlugin(Registrar registrar) {
+        this.registrar = registrar;
     }
 
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "open_noti_settings");
-    channel.setMethodCallHandler(new OpenNotiSettingsPlugin(registrar.activity()));
+    channel.setMethodCallHandler(new OpenNotiSettingsPlugin(registrar));
   }
 
   @Override
@@ -47,11 +47,11 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
         Intent intent = new Intent();
         intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
 
-        intent.putExtra("app_package", activity.getPackageName());
-        intent.putExtra("app_uid", activity.getApplicationInfo().uid);
+        intent.putExtra("app_package", registrar.context().getPackageName());
+        intent.putExtra("app_uid", registrar.context().getApplicationInfo().uid);
 
-        intent.putExtra("android.provider.extra.APP_PACKAGE", activity.getPackageName());
-        activity.startActivity(intent);
+        intent.putExtra("android.provider.extra.APP_PACKAGE", registrar.context().getPackageName());
+        registrar.context().startActivity(intent);
         result.success(null);
     }
 
@@ -78,7 +78,7 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
 //          channel.setLightColor();
           if (Boolean.valueOf(true).equals(call.argument("playSound"))) {
               AudioAttributes audioAttributes = new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).build();
-              Uri uri = retrieveSoundResourceUri(activity, (String) call.argument("sound"));
+              Uri uri = retrieveSoundResourceUri(registrar.context(), (String) call.argument("sound"));
               channel.setSound(uri, audioAttributes);
           } else {
 //              channel.setSound(null,null);
@@ -104,7 +104,7 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
           channel.setShowBadge(Boolean.valueOf(true).equals(call.argument("channelShowBadge")));
           // Register the channel with the system; you can't change the importance
           // or other notification behaviors after this
-          NotificationManager notificationManager = activity.getSystemService(NotificationManager.class);
+          NotificationManager notificationManager = registrar.context().getSystemService(NotificationManager.class);
           notificationManager.createNotificationChannel(channel);
         }
       result.success(null);
