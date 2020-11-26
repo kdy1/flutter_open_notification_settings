@@ -46,6 +46,7 @@ public class OpenNotiSettingsPlugin implements MethodCallHandler {
     private void openSettings(MethodCall call, Result result) {
         Intent intent = new Intent();
         intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
         intent.putExtra("app_package", registrar.context().getPackageName());
         intent.putExtra("app_uid", registrar.context().getApplicationInfo().uid);
