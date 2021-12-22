@@ -29,21 +29,21 @@ class NotificationSetting {
       NotificationDetails notificationDetails) {
     Map<String, dynamic> serializedPlatformSpecifics;
     serializedPlatformSpecifics = {
-      'channelId': notificationDetails?.android?.channelId,
-      'channelName': notificationDetails?.android?.channelName,
-      'channelDescription': notificationDetails?.android?.channelDescription,
-      'importance': notificationDetails?.android?.importance?.value,
-      'groupKey': notificationDetails?.android?.groupKey,
-      'playSound': notificationDetails?.android?.playSound,
-      'sound': notificationDetails?.android?.sound?.toString(),
-      'enableVibration': notificationDetails?.android?.enableVibration,
-      'vibrationPattern': notificationDetails?.android?.vibrationPattern,
-      'enableLights': notificationDetails?.android?.enableLights,
-      'ledColorRed': notificationDetails?.android?.ledColor?.red,
-      'ledColorGreen': notificationDetails?.android?.ledColor?.green,
-      'ledColorBlue': notificationDetails?.android?.ledColor?.blue,
-      'ledColorAlpha': notificationDetails?.android?.ledColor?.alpha,
-      'channelShowBadge': notificationDetails?.android?.channelShowBadge,
+      'channelId': notificationDetails.android?.channelId,
+      'channelName': notificationDetails.android?.channelName,
+      'channelDescription': notificationDetails.android?.channelDescription,
+      'importance': notificationDetails.android?.importance.value,
+      'groupKey': notificationDetails.android?.groupKey,
+      'playSound': notificationDetails.android?.playSound,
+      'sound': notificationDetails.android?.sound?.toString(),
+      'enableVibration': notificationDetails.android?.enableVibration,
+      'vibrationPattern': notificationDetails.android?.vibrationPattern,
+      'enableLights': notificationDetails.android?.enableLights,
+      'ledColorRed': notificationDetails.android?.ledColor?.red,
+      'ledColorGreen': notificationDetails.android?.ledColor?.green,
+      'ledColorBlue': notificationDetails.android?.ledColor?.blue,
+      'ledColorAlpha': notificationDetails.android?.ledColor?.alpha,
+      'channelShowBadge': notificationDetails.android?.channelShowBadge,
     };
     return serializedPlatformSpecifics;
   }
